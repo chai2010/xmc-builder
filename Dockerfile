@@ -5,9 +5,14 @@ RUN apt-get install -y libjsoncpp-dev
 RUN apt-get install -y git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev
 RUN apt-get install -y libcurl4-openssl-dev
 RUN apt-get install -y patchelf
-RUN apt-get install -y golang
 
 RUN ln -s /usr/include/jsoncpp/json/ /usr/include/json
+
+# golang
+# https://github.com/golang/go/wiki/Ubuntu
+RUN sudo add-apt-repository ppa:longsleep/golang-backports
+RUN sudo apt-get update
+RUN sudo apt-get install golang-1.13-go
 
 WORKDIR /root
 
