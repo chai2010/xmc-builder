@@ -10,9 +10,9 @@ RUN ln -s /usr/include/jsoncpp/json/ /usr/include/json
 
 # golang
 # https://github.com/golang/go/wiki/Ubuntu
-RUN sudo add-apt-repository ppa:longsleep/golang-backports
-RUN sudo apt-get update
-RUN sudo apt-get install golang-1.13-go
+RUN add-apt-repository ppa:longsleep/golang-backports
+RUN apt-get update
+RUN apt-get install golang-1.13-go
 
 WORKDIR /root
 
