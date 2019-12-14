@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update
-RUN apt-get install wget
+RUN apt-get install -y wget
 
 RUN apt-get install -y libjsoncpp-dev
 RUN apt-get install -y git build-essential cmake libuv1-dev libmicrohttpd-dev libssl-dev
