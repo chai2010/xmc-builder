@@ -18,6 +18,10 @@ RUN mkdir -p /root/download && cd /root/download \
 RUN ln -s /usr/local/go1.13.5/bin/go /usr/bin/go
 RUN rm -rf /root/download
 
+ENV GOPATH=/go
+ENV GOLANG_VERSION=1.13.5
+ENV GOPROXY=https://goproxy.cn
+
 WORKDIR /root
 
 CMD ["sh"]
