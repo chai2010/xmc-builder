@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.2-base-ubuntu16.04
+FROM nvidia/cuda:10.2-devel-ubuntu16.04
 
 RUN apt-get update
 RUN apt-get install -y wget
